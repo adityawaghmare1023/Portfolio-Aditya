@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aditya Waghmare | QA / Software Tester</title>
+<meta name="description" content="Portfolio of Aditya Waghmare, aspiring QA engineer skilled in manual testing, Selenium, SQL and Agile.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070b10;--surf:#0e151d;--line:#1e2b38;--tx:#e8f0f6;--mut:#8ea3b5;--ac:#2de2b0;--ac2:#4aa8ff;--bad:#ff6b6b;color-scheme:dark;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#070b10;--surf:#0e151d;--line:#1e2b38;--tx:#e8f0f6;--mut:#8ea3b5;--ac:#2de2b0;--ac2:#4aa8ff}}
+:root[data-theme="dark"]{--bg:#070b10;--surf:#0e151d;--line:#1e2b38;--tx:#e8f0f6;--mut:#8ea3b5;--ac:#2de2b0;--ac2:#4aa8ff}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f4f8fb;--surf:#fff;--line:#d6e1ea;--tx:#0d1822;--mut:#566b7d;--ac:#007f5f;--ac2:#1f6fd0;color-scheme:light}}
+:root[data-theme="light"]{--bg:#f4f8fb;--surf:#fff;--line:#d6e1ea;--tx:#0d1822;--mut:#566b7d;--ac:#007f5f;--ac2:#1f6fd0;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Space Grotesk",system-ui,sans-serif;line-height:1.55;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+body::after{content:"";position:fixed;inset:0;background:radial-gradient(600px 400px at 85% 0%,color-mix(in srgb,var(--ac) 14%,transparent),transparent),radial-gradient(500px 400px at 0% 40%,color-mix(in srgb,var(--ac2) 10%,transparent),transparent);pointer-events:none;z-index:-1}
+a{color:inherit;text-decoration:none}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.logo{font-weight:700;display:flex;gap:10px;align-items:center}
+.logo b{display:grid;place-items:center;width:30px;height:30px;border-radius:8px;background:var(--ac);color:#04110c;font-size:13px}
+nav{display:flex;gap:22px;font-size:14px;color:var(--mut)}
+nav a:hover{color:var(--ac)}
+@media(max-width:720px){nav{display:none}}
+section{padding:80px 5vw;max-width:1100px;margin:auto}
+.eyebrow{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--ac);letter-spacing:.12em;text-transform:uppercase}
+h2{font-size:clamp(26px,4.5vw,40px);margin:8px 0 28px;letter-spacing:-.02em;line-height:1.15}
+.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center}
+h1{font-size:clamp(44px,9vw,92px);margin:10px 0;line-height:1;letter-spacing:-.04em}
+.tag{font-size:clamp(20px,3.2vw,30px);color:var(--mut);margin:0 0 8px}
+.tag em{color:var(--ac);font-style:normal}
+.sub{color:var(--mut);max-width:560px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:12px 22px;border-radius:999px;border:1px solid var(--line);font-weight:500;cursor:pointer;background:var(--surf);color:var(--tx);font:inherit;transition:.2s}
+.btn.p{background:var(--ac);color:#04110c;border-color:var(--ac);font-weight:700}
+.btn:hover{transform:translateY(-2px);border-color:var(--ac)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:36px}
+.chip{font-family:"JetBrains Mono",monospace;font-size:12px;padding:6px 12px;border-radius:6px;border:1px solid var(--line);color:var(--mut);background:var(--surf)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:24px}
+.stat b{display:block;font-size:48px;color:var(--ac);letter-spacing:-.03em;line-height:1}
+.stat span{color:var(--mut);font-size:14px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.tab{padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--mut);font:inherit;font-size:14px;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--ac);color:#04110c;border-color:var(--ac);font-weight:700}
+.panel h3{margin:0 0 6px;font-size:22px}
+.panel p{color:var(--mut);margin:0 0 16px}
+.flow{display:flex;align-items:stretch;gap:0;overflow-x:auto;padding-bottom:8px}
+.step{flex:1 0 118px;padding:18px 12px;text-align:center;border:1px solid var(--line);background:var(--surf);position:relative;font-size:14px;transition:.4s}
+.step:first-child{border-radius:14px 0 0 14px}.step:last-child{border-radius:0 14px 14px 0}
+.step small{display:block;font-family:"JetBrains Mono",monospace;color:var(--mut);font-size:11px}
+.step.on{background:color-mix(in srgb,var(--ac) 18%,var(--surf));border-color:var(--ac);color:var(--ac)}
+.step.bug.on{background:color-mix(in srgb,var(--bad) 18%,var(--surf));border-color:var(--bad);color:var(--bad)}
+.legend{margin-top:14px;font-size:13px;color:var(--mut)}
+.tl{border-left:2px solid var(--line);padding-left:28px;margin-left:8px;position:relative}
+.tl::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--ac);box-shadow:0 0 0 5px color-mix(in srgb,var(--ac) 20%,transparent)}
+.tl h3{margin:0;font-size:24px}
+.tl .meta{color:var(--ac);font-size:13px;margin:4px 0 14px}
+.tl ul{margin:0;padding-left:18px;color:var(--mut)}
+.tl li{margin:6px 0}
+.more{display:none;margin-top:14px}.more.open{display:block}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.proj h3{margin:6px 0 8px;font-size:22px}
+.proj p{color:var(--mut);margin:0 0 14px}
+.bars{display:grid;gap:10px;margin:16px 0}
+.bar{display:grid;grid-template-columns:110px 1fr 36px;align-items:center;gap:10px;font-size:13px;color:var(--mut)}
+.bar i{display:block;height:8px;border-radius:99px;background:var(--line);overflow:hidden}
+.bar i::after{content:"";display:block;height:100%;width:var(--w);background:linear-gradient(90deg,var(--ac),var(--ac2));transform-origin:left;transform:scaleX(0);transition:transform 1.2s ease}
+.in .bar i::after{transform:scaleX(1)}
+.edu{display:grid;gap:14px}
+.edu div{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.edu div:last-child{border:0;padding:0}
+.edu span{color:var(--mut);font-size:14px}
+.contact{text-align:center}
+.contact .btns{justify-content:center}
+.links{display:flex;gap:22px;justify-content:center;margin-top:28px;font-size:14px;color:var(--mut);flex-wrap:wrap}
+.links a:hover{color:var(--ac)}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:30px 5vw 40px;border-top:1px solid var(--line)}
+.rv{opacity:0;transform:translateY(24px);transition:.8s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.bar i::after{transform:scaleX(1);transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="#home"><b>AW</b>Aditya Waghmare</a>
+  <nav><a href="#numbers">Impact</a><a href="#skills">Skills</a><a href="#process">Process</a><a href="#experience">Experience</a><a href="#project">Project</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="eyebrow">QA / SOFTWARE TESTER</div>
+  <h1>Aditya Waghmare</h1>
+  <p class="tag">I find the bugs <em>before</em> your users do.</p>
+  <p class="sub">Aspiring QA engineer with hands-on backend exposure. Manual testing, Selenium automation, SQL validation and Agile delivery, all aimed at shipping bug-free software.</p>
+  <div class="btns"><a class="btn p" href="https://drive.google.com/file/d/1623tk6GPB8KDM8tRZQ5Z9AtX-BW5Mly2/view?usp=sharing" target="_blank" rel="noopener">Download Résumé ↓</a><a class="btn" href="#project">See my testing work</a><a class="btn" href="#contact">Contact ↗</a></div>
+  <div class="chips"><span class="chip">MANUAL TESTING</span><span class="chip">SELENIUM</span><span class="chip">SQL</span><span class="chip">JIRA</span><span class="chip">POSTMAN</span></div>
+</section>
+
+<section id="numbers" class="rv">
+  <div class="eyebrow">Testing impact</div>
+  <h2>Numbers from real test cycles.</h2>
+  <div class="stats">
+    <div class="card stat"><b data-n="52">0</b><span>Test scenarios designed</span></div>
+    <div class="card stat"><b data-n="179">0</b><span>Test cases derived &amp; executed</span></div>
+    <div class="card stat"><b data-n="48">0</b><span>Defects logged with repro steps</span></div>
+    <div class="card stat"><b data-n="6">0</b><span>Months in a backend team (PNB MetLife)</span></div>
+  </div>
+</section>
+
+<section id="skills" class="rv">
+  <div class="eyebrow">Toolkit</div>
+  <h2>A tester’s stack, built in layers.</h2>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="true" data-t="0">Manual testing</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="1">Automation</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="2">Tools</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="3">Data &amp; code</button>
+  </div>
+  <div class="card panel" id="panel"></div>
+</section>
+
+<section id="process" class="rv">
+  <div class="eyebrow">Signature workflow</div>
+  <h2>Every defect has a life cycle.</h2>
+  <div class="flow" id="flow"></div>
+  <p class="legend">A simplified bug life cycle: found, reported, fixed, then verified. If the retest fails, it loops back.</p>
+</section>
+
+<section id="experience" class="rv">
+  <div class="eyebrow">Experience</div>
+  <h2>Learning inside a real enterprise team.</h2>
+  <div class="card tl">
+    <h3>Backend Developer Intern, PNB MetLife</h3>
+    <div class="meta mono">Sep 2025 – Mar 2026 · eBranchPro</div>
+    <ul>
+      <li>Built backend microservices with Java and Spring Boot.</li>
+      <li>Debugged and analysed RESTful APIs for internal applications.</li>
+      <li>Stored and retrieved data using MongoDB.</li>
+    </ul>
+    <div class="more" id="more">
+      <ul>
+        <li>Helped debug and optimise backend performance.</li>
+        <li>Contributed to the eBranchPro Runbook.</li>
+        <li>Joined expert huddle sessions and technical discussions with the project team.</li>
+      </ul>
+    </div>
+    <div class="btns"><button class="btn" id="moreBtn">View details ↓</button></div>
+  </div>
+</section>
+
+<section id="project" class="rv">
+  <div class="eyebrow">Selected project</div>
+  <h2>Work you can understand at a glance.</h2>
+  <div class="grid2">
+    <div class="card proj">
+      <div class="eyebrow">Manual testing</div>
+      <h3>Front Accounting Website Testing</h3>
+      <p>End-to-end manual testing of a web accounting application, following standard STLC practice. I wrote the Test Plan (scope, approach, entry and exit criteria), designed the scenarios and cases, executed every run and compiled the defect report.</p>
+      <div class="chips" style="margin:0"><span class="chip">Test Plan</span><span class="chip">Test Cases</span><span class="chip">Defect Report</span><span class="chip">STLC</span></div>
+    </div>
+    <div class="card">
+      <div class="eyebrow">By the numbers</div>
+      <div class="bars" id="bars">
+        <div class="bar"><span>Scenarios</span><i style="--w:29%"></i><b class="mono">52</b></div>
+        <div class="bar"><span>Test cases</span><i style="--w:100%"></i><b class="mono">179</b></div>
+        <div class="bar"><span>Defects</span><i style="--w:27%"></i><b class="mono">48</b></div>
+      </div>
+      <p style="color:var(--mut);font-size:14px;margin:0">Each defect was logged with clear reproduction steps, expected vs. actual results and a severity level.</p>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="rv">
+  <div class="eyebrow">Background</div>
+  <h2>Education &amp; certifications.</h2>
+  <div class="grid2">
+    <div class="card edu">
+      <div><b>B.Sc. Information Technology</b><span>2025</span></div>
+      <span style="margin-top:-8px">DG Ruparel College of Arts, Commerce and Science, Mumbai</span>
+      <div><b>XII, Science</b><span>2022</span></div>
+      <span style="margin-top:-8px">Elphinstone College, Fort, Mumbai</span>
+    </div>
+    <div class="card edu">
+      <div><b>Software Testing</b><span>Quastech · 2026</span></div>
+      <div><b>Java Programming</b><span>RST Forum, Dadar · 2025</span></div>
+      <div><b>Methodologies</b><span>Agile · Scrum · V-Model</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact rv">
+  <div class="eyebrow">Start a conversation</div>
+  <h2>Looking for a QA role? Let’s talk.</h2>
+  <p class="sub" style="margin:0 auto">Open to entry-level Software Testing and Quality Assurance roles.</p>
+  <div class="btns"><a class="btn p" href="mailto:adityawaghmare010@gmail.com">Email Aditya ↗</a><button class="btn" id="copy">Copy email</button></div>
+  <div class="links"><a href="mailto:adityawaghmare010@gmail.com">Email</a><a href="https://www.linkedin.com/in/adityawaghmare10" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/adityawaghmare1023" target="_blank" rel="noopener">GitHub</a><a href="https://drive.google.com/file/d/1623tk6GPB8KDM8tRZQ5Z9AtX-BW5Mly2/view?usp=sharing" target="_blank" rel="noopener">Résumé</a></div>
+</section>
+</main>
+<footer>© 2026 Aditya Waghmare · Mumbai · <a href="#home">Back to top ↑</a></footer>
+
+<script>
+var skills=[
+["Manual testing","Test plans, scenarios and cases, executed with discipline.",["Test Plan Creation","Scenario Design","Test Case Design","Test Case Execution","Defect Reporting","Bug Life Cycle"]],
+["Automation","Selenium WebDriver for web apps, structured with proven frameworks.",["Selenium WebDriver","Data Driven","Keyword Driven","Hybrid Driven"]],
+["Tools &amp; process","Tracking, API checks and the methodologies teams actually use.",["Jira","Postman","Agile Testing","Scrum","V-Model","SDLC","STLC"]],
+["Data &amp; code","Validating data at the source and reading code to find root causes.",["SQL (MySQL)","Basic Java","Spring Boot (internship)","MongoDB","REST APIs"]]];
+var panel=document.getElementById("panel");
+function show(i){var s=skills[i];panel.innerHTML="<h3>"+s[0]+"</h3><p>"+s[1]+"</p><div class=\"chips\" style=\"margin:0\">"+s[2].map(function(c){return "<span class=\"chip\">"+c+"</span>"}).join("")+"</div>"}
+document.querySelectorAll(".tab").forEach(function(b){b.addEventListener("click",function(){document.querySelectorAll(".tab").forEach(function(x){x.setAttribute("aria-selected","false")});b.setAttribute("aria-selected","true");show(+b.dataset.t)})});
+show(0);
+
+var st=[["New","found"],["Assigned","to dev"],["Open","in fix"],["Fixed","by dev"],["Retest","by QA"],["Closed","verified"]];
+var flow=document.getElementById("flow");
+flow.innerHTML=st.map(function(s,i){return "<div class=\"step"+(i==0?" bug":"")+"\"><small>0"+(i+1)+"</small>"+s[0]+"<small>"+s[1]+"</small></div>"}).join("");
+var steps=flow.children,k=0;
+setInterval(function(){for(var i=0;i<steps.length;i++)steps[i].classList.toggle("on",i==k);k=(k+1)%steps.length},900);
+
+document.getElementById("moreBtn").addEventListener("click",function(){var m=document.getElementById("more");var o=m.classList.toggle("open");this.textContent=o?"Hide details ↑":"View details ↓"});
+document.getElementById("copy").addEventListener("click",function(){var b=this,t="adityawaghmare010@gmail.com";function d(){b.textContent="Copied ✓";setTimeout(function(){b.textContent="Copy email"},1800)}
+try{navigator.clipboard.writeText(t).then(d,d)}catch(e){d()}});
+
+function count(el){var n=+el.dataset.n,t=0;var iv=setInterval(function(){t+=Math.ceil(n/40);if(t>=n){t=n;clearInterval(iv)}el.textContent=t},30)}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");e.target.querySelectorAll("[data-n]").forEach(count);io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
